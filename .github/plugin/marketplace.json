@@ -1,0 +1,23 @@
+{
+  "name": "plugin-marketplace",
+  "metadata": {
+    "description": "My company's collection of GitHub Copilot plugins, agents, prompts, and skills",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "owner": {
+    "name": "My Name",
+    "email": "my-email@example.com"
+  },
+  "plugins": [
+    {
+      "name": "dev-flow",
+      "source": "dev-flow",
+      "description": "A comprehensive SDLC orchestration framework for GitHub Copilot, coordinating planning, coding, testing, and review through specialized agents and skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Your Name"
+      }
+    }
+  ]
+}
