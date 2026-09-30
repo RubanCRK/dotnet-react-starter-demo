@@ -39,6 +39,24 @@ export interface SystemHealthInfo {
   environment: string;
 }
 
+/** Supported display theme values */
+export type DisplayTheme = 'light' | 'dark';
+
+/** User preferences payload (mirrors backend UserPreferenceDto) */
+export interface UserPreferences {
+  userId: number;
+  theme: DisplayTheme;
+  notificationsEnabledIndicator: boolean;
+  createdDate: string;
+  updatedDate: string;
+}
+
+/** Request payload for saving user preferences */
+export interface UpdateUserPreferencesRequest {
+  theme: DisplayTheme;
+  notificationsEnabledIndicator: boolean;
+}
+
 /** Error response from API failures */
 export interface ApiErrorResponse {
   code: string;
