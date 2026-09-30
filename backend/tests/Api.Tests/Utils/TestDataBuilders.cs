@@ -7,6 +7,28 @@ namespace Api.Tests.Utils;
 public static class TestDataBuilders
 {
     /// <summary>
+    /// Creates a sample user preference entity for testing purposes.
+    /// </summary>
+    /// <param name="userId">Owning user identifier (default: 1).</param>
+    /// <param name="theme">Display theme value (default: "light").</param>
+    /// <param name="notificationsEnabled">Notification flag (default: true).</param>
+    /// <returns>A configured user preference entity.</returns>
+    public static Api.Domain.UserPreference BuildUserPreference(
+        int userId = 1,
+        string theme = Api.Domain.DisplayThemes.Light,
+        bool notificationsEnabled = true)
+    {
+        return new Api.Domain.UserPreference
+        {
+            UserId = userId,
+            Theme = theme,
+            NotificationsEnabledIndicator = notificationsEnabled,
+            CreatedDate = DateTime.UtcNow.AddDays(-1),
+            UpdatedDate = DateTime.UtcNow
+        };
+    }
+
+    /// <summary>
     /// Creates a sample health response for testing purposes.
     /// </summary>
     /// <param name="status">Health status value (default: "healthy").</param>
